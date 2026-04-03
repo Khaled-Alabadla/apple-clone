@@ -1,4 +1,4 @@
-// Theme Toggle Logic
+// Theme Toggle
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
@@ -25,4 +25,35 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.from(".hero-title", { duration: 1, y: 30, opacity: 0, ease: "power3.out" });
         gsap.from(".hero-subtitle", { duration: 1, y: 30, opacity: 0, ease: "power3.out", delay: 0.2 });
     }
+
+    const megaMenu    = document.getElementById('mega-menu');
+    const menuItems   = document.querySelectorAll('[data-menu]');
+    const allPanels   = document.querySelectorAll('.menu-panel');
+    let hideTimer     = null;
+
+    function openMenu(id) {
+        clearTimeout(hideTimer);
+        allPanels.forEach(p => p.classList.remove('is-active'));
+        const panel = document.getElementById(`menu-${id}`);
+        if (panel) {
+            panel.classList.add('is-active');
+            megaMenu.classList.add('is-open');
+        }
+    }
+
+    function closeMenu() {
+        hideTimer = setTimeout(() => {
+            megaMenu.classList.remove('is-open');
+            allPanels.forEach(p => p.classList.remove('is-active'));
+        }, 120);
+    }
+
+    menuItems.forEach(item => {
+        item.addEventListener('mouseenter', () => openMenu(item.dataset.menu));
+        item.addEventListener('mouseleave', closeMenu);
+    });
+
+    megaMenu.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+    megaMenu.addEventListener('mouseleave', closeMenu);
 });
+

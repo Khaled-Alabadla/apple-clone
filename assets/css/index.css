@@ -1,68 +1,3 @@
-.text-center {
-    text-align: center;
-}
-
-.headline {
-    font-size: 56px;
-    font-weight: 600;
-    letter-spacing: -0.005em;
-    margin-bottom: 6px;
-    color: #000;
-}
-
-.subhead {
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 14px;
-    color: #000;
-}
-
-.cta-links {
-    margin-top: 14px;
-    display: flex;
-    gap: 18px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.btn-primary {
-    background-color: var(--link-color);
-    color: #fff;
-    padding: 12px 22px;
-    border-radius: 980px;
-    font-size: 15px;
-    font-weight: 400;
-    transition: background-color 0.3s;
-    display: inline-block;
-}
-
-.btn-primary:hover {
-    background-color: var(--button-hover);
-    color: #fff;
-    text-decoration: none;
-}
-
-.link-arrow {
-    color: var(--link-color);
-    font-size: 19px;
-    font-weight: 400;
-    display: inline-flex;
-    align-items: center;
-}
-
-.link-arrow::after {
-    content: " >";
-    font-family: monospace;
-    margin-left: 5px;
-    font-size: 18px;
-}
-
-.link-arrow:hover {
-    text-decoration: underline;
-}
-
-/* THEMES */
 .theme-dark {
     background-color: #000;
     color: #f5f5f7;
@@ -73,141 +8,20 @@
     color: #1d1d1f;
 }
 
-.dark-mode .hero-module,
-.dark-mode .promo-module {
+.dark-mode .hero-section,
+.dark-mode .promo-section {
     filter: invert(1) hue-rotate(180deg);
     transition: filter 0.3s ease;
 }
 
-/* HERO  */
-.hero-module {
-    padding-top: 55px;
-    height: 650px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 12px;
-}
-
-.hero-module.mt-nav {
-    margin-top: 44px;
-}
-
-.hero-content {
-    z-index: 2;
-    text-align: center;
-    width: 100%;
-}
-
-.hero-module .logo-wrapper {
-    height: 50px;
-}
-
-.hero-module .logo-img {
-    height: 100%;
-    object-fit: contain;
-}
-
-/* CARDS */
-.promo-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    padding: 0 12px;
-    margin-bottom: 12px;
-}
-
-.promo-grid .logo-img {
-    height: 100%;
-    object-fit: contain;
-}
-
-.promo-module {
-    height: 580px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    padding-top: 40px;
-    position: relative;
-    overflow: hidden;
-}
-
-.promo-headline {
-    font-size: 40px;
-    font-weight: 600;
-    letter-spacing: -0.005em;
-    margin-bottom: 4px;
-}
-
-.promo-subhead {
-    font-size: 13px;
-    font-weight: 400;
-}
-
-.promo-content-top {
-    margin-top: 0;
-}
-
-.promo-content-bottom {
-    margin-top: auto;
-    margin-bottom: 40px;
-}
-
-.promo-logo-wrapper {
-    height: 40px;
-    margin-bottom: 8px;
-}
-
-.promo-overlay-wrapper {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    padding: 40px 0;
-    width: 100%;
-    transition: background 0.3s ease;
-}
-
-.promo-subhead-padded {
-    padding: 0 40px;
-}
-
-/* CAROUSEL  */
-.carousel-section {
-    padding: 20px 0 60px 0;
-}
-
 .swiper {
-    width: 100%;
     height: 500px;
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-    overflow: hidden;
-    position: relative;
     width: 80%;
     margin-right: 20px;
     transition: transform 0.3s ease;
-}
-
-.swiper-slide-active {
-    transform: scale(1);
 }
 
 .swiper-slide:not(.swiper-slide-active) {
@@ -215,192 +29,38 @@
     opacity: 0.6;
 }
 
-.slide-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.95);
-    transition: filter 0.3s ease;
-}
-
-.dark-mode .slide-img {
-    filter: brightness(0.85);
-}
-
-.slide-info {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.btn-stream {
-    background: white;
-    color: black;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-weight: 600;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-}
-
-.swiper-pagination-bullet {
-    background: var(--text-color);
-}
-
-
 #hero-iphone {
     background-image: url('https://www.apple.com/v/home/a/images/heroes/iphone-family/hero_iphone_family__fuz5j2v5xx6y_large_2x.jpg');
 }
 
 #hero-macbook-neo {
     background-image: url('https://www.apple.com/v/home/a/images/heroes/macbook-neo/hero_macbook_neo__gnm3snkti4a6_large_2x.jpg');
-    background-position: center 30%;
 }
 
 #hero-ipad-air {
     background-image: url('https://www.apple.com/v/home/a/images/heroes/ipad-air-m4/hero_ipad_air_m4__ew8k92mk1w6e_large_2x.jpg');
-    background-position: center bottom;
 }
 
 #promo-wwdc {
     background-image: url('https://www.apple.com/v/home/a/images/promos/wwdc26-announce/promo_wwdc26_announce__b74q051bn5ki_large_2x.jpg');
-    background-position: center top;
 }
 
 #promo-airpods {
     background-image: url('https://www.apple.com/v/home/a/images/promos/airpods-max-2/promo_airpods_max_2__bglmlnex7coi_large_2x.jpg');
-    background-position: center top;
 }
 
 #promo-watch {
     background-image: url('https://www.apple.com/v/home/a/images/promos/apple-watch-series-11/promo_apple_watch_series_11__b63hxviqvonm_large_2x.jpg');
-    background-position: center bottom;
-}
-
-#promo-watch .hero-content {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    right: 0;
 }
 
 #promo-macbook-pro {
     background-image: url('https://www.apple.com/v/home/a/images/promos/macbook-pro/promo_macbook_pro__e3xqrygvp9ea_large_2x.jpg');
-    background-position: center 80%;
 }
 
 #promo-tradein {
     background-image: url('https://www.apple.com/v/home/a/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_large_2x.jpg');
-    background-position: center center;
 }
 
 #promo-card {
     background-image: url('https://www.apple.com/v/home/a/images/promos/apple-card/promo_apple_card__5cm7draujpey_large_2x.jpg');
-    background-position: center center;
-}
-
-
-@media (max-width: 768px) {
-    .headline {
-        font-size: 44px;
-        margin-bottom: 4px;
-    }
-
-    .subhead {
-        font-size: 22px;
-    }
-
-    .promo-headline {
-        font-size: 32px;
-    }
-
-    .promo-subhead {
-        font-size: 18px;
-    }
-
-    .hero-module {
-        height: 500px;
-        padding-top: 35px;
-    }
-
-    .hero-content {
-        margin-top: 15px;
-    }
-
-    /* Promos */
-    .promo-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .promo-module {
-        height: 520px;
-    }
-
-    .promo-content-bottom {
-        margin-bottom: 5px !important;
-    }
-
-    .promo-overlay-wrapper {
-        padding: 25px 0;
-    }
-
-    .promo-subhead-padded {
-        padding: 0 15px;
-    }
-
-    .hero-module .logo-wrapper {
-        height: 38px;
-    }
-
-    .promo-logo-wrapper {
-        height: 32px;
-    }
-
-    #promo-watch .hero-content {
-        top: 30px;
-    }
-
-    .footer-directory {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .footer-legal-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .footer-legal-link.ml {
-        margin-left: 0;
-        margin-right: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .headline {
-        font-size: 36px;
-    }
-
-    .subhead {
-        font-size: 19px;
-    }
-
-    .promo-headline {
-        font-size: 28px;
-    }
-
-    .hero-module {
-        height: 480px;
-    }
-
-    .promo-module {
-        height: 480px;
-        padding-top: 25px;
-    }
 }
