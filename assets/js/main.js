@@ -20,12 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Optional: Initialize GSAP interactions if available
-    if (typeof gsap !== 'undefined') {
-        gsap.from(".hero-title", { duration: 1, y: 30, opacity: 0, ease: "power3.out" });
-        gsap.from(".hero-subtitle", { duration: 1, y: 30, opacity: 0, ease: "power3.out", delay: 0.2 });
-    }
-
     const megaMenu    = document.getElementById('mega-menu');
     const menuItems   = document.querySelectorAll('[data-menu]');
     const allPanels   = document.querySelectorAll('.menu-panel');
