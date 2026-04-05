@@ -6,17 +6,42 @@
 
 .swiper {
     height: 500px;
+    overflow: visible !important; /* Allow slides to peek out */
 }
 
 .swiper-slide {
-    width: 80%;
-    margin-right: 20px;
-    transition: transform 0.3s ease;
+    width: 1250px;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    border-radius: 20px;
+    opacity: 0.5;
+    transform: scale(0.92);
 }
 
-.swiper-slide:not(.swiper-slide-active) {
-    transform: scale(0.95);
-    opacity: 0.6;
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.swiper-pagination {
+    bottom: -40px !important;
+}
+
+.swiper-pagination-bullet {
+    background: #86868b !important;
+    opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+    background: #1d1d1f !important;
+    opacity: 1;
+}
+
+.dark-mode .swiper-pagination-bullet {
+    background: #d2d2d7 !important;
+}
+
+.dark-mode .swiper-pagination-bullet-active {
+    background: #ffffff !important;
 }
 
 #hero-iphone {
