@@ -19,14 +19,11 @@
               "apple-subtext": "#86868b",
               "apple-border": "#d2d2d7",
               "apple-link-dark": "#424245",
+              "apple-card-bg":"#eaeaed",
             },
             fontFamily: {
               sans: [
-                "-apple-system",
-                "BlinkMacSystemFont",
-                "SF Pro Display",
-                "Segoe UI",
-                "sans-serif",
+                "-apple-system","BlinkMacSystemFont","SF Pro Display","Segoe UI","sans-serif",
               ],
             },
             height: {
@@ -403,18 +400,25 @@
     <main>
       <!--Hero : Accessories-->
       <div class="dark fixed top-12 left-5 w-full z-50 ">
-        <div class="flex items-center justify-between py-4 max-w-[1024px] mx-auto px-8">
+        <div class="flex items-center justify-between py-4 max-w-[1024px] mx-auto px-8 ">
             <h2 class="text-lg font-semibold text-[#000]">Accessories</h2>
             <span class="text-xs text-gray-500 cursor-pointer">Browse all</span>
         </div>
      </div>
+
       <section class="flex flex-col md:flex-row items-center justify-between max-w-[1024px] pt-28 mx-auto px-5 dark">
         <div class="md:w-1/2 ">
           <h1 class="text-6xl font-bold text-apple-gray mb-6"> Meet your match.</h1>
           <p class="text-xl text-apple-gray mb-8 max-w-sm">The accessories you love. In a new mix of colors and textures.</p>
           <div class="space-y-3">
-            <a href="#" class="text-apple-blue hover:underline block text-lg">Shop all iPhone accessories ></a >
-            <a href="#" class="text-apple-blue hover:underline block text-lg">Shop all Apple Watch bands ></a>
+            <a href="#" class="flex items-center text-apple-blue hover:underline text-lg">Shop all iPhone accessories 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+               <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></a >
+            <a href="#" class="flex items-center text-apple-blue hover:underline text-lg">Shop all Apple Watch bands 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+               <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></a>
           </div>
         </div>
       <div class="w-full aspect-[2/1] md:aspect-[2.5/1] pt-5">
@@ -429,14 +433,14 @@
       <!--Search : Accessories-->
       <section class="max-w-[1024px] mx-auto px-5 pt-12  text-center dark">
         <h2 class="text-3xl font-semibold mb-10 dark"> Find the accessories you’re looking for.</h2>
-        <div class="relative max-w-xl mx-auto">
+        <div class="relative max-w-xl mx-auto ">
           <span class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400">
             <svg class="w-5 h-5" fill="none" stroke="currentColor"viewBox="0 0 24 24"  >
               <path stroke-linecap="round" stroke-linejoin="round"stroke-width="2"  d="m21 21-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"/>
             </svg>
           </span>
           <input id="search-input" type="text" placeholder="Search accessories"
-            class="w-full py-4 pl-14 pr-5 border-2 border-apple-border  rounded-2xl text-base focus:border-apple-blue  outline-none"
+            class="bg-apple-card-bg dark:bg-[#1d1d1f] w-full py-4 pl-14 pr-5 border-2 border-apple-border  rounded-2xl text-base focus:border-apple-blue  outline-none"
           />
         </div>
 
@@ -605,13 +609,13 @@
       </section>
         
       <!-- Featured iPhone Accessories -->
-      <section class="swiper mySwiper max-w-[1024px] pb-14 mx-auto relative dark">
+      <section class="swiper mySwiper max-w-[1024px] mt-10 pb-14 mx-auto relative dark">
         <div class="text-center mb-12">
             <h2 class="text-4xl md:text-5xl text-apple-gray font-semibold tracking-tight">Featured iPhone Accessories</h2>
         </div>
 
         <div class="swiper-wrapper flex items-center md:items-stretch flex-row  gap-6">
-           <div class="swiper-slide mr-0 bg-apple-light-bg rounded-xl p-5 flex flex-col items-center group/card">
+           <div class="swiper-slide mr-0 bg-apple-card-bg dark:bg-[#1d1d1f]  rounded-xl p-5 flex flex-col items-center group/card">
             <div class=" flex items-center justify-center">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MHW04?wid=532&hei=582&fmt=png-alpha&.v=d0djMWdpRmQxQlNMVnRYY2ZnY2xnUUhqc0NvK2RZTVd5TWVhUDFuQlo0M1FwWjlSbE1lUlFJc1Y5RCtEdkFRbVdtMElqcENQeXU4c21YNjUxMWxoTXc" 
                     alt="iPhone Case" 
@@ -635,7 +639,7 @@
             <p class="text-sm text-apple-gray mt-auto">$49.00</p>
            </div>
 
-            <div class="swiper-slide  p-5 bg-apple-light-bg rounded-xl flex flex-col items-center group/card">
+            <div class="swiper-slide  p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
             <div class="flex items-center justify-center">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MHYX4?wid=532&hei=582&fmt=png-alpha&.v=dEtBeEVIaTMzc3hFNmQ5aEpmTloxZ0hqc0NvK2RZTVd5TWVhUDFuQlo0MDZLa0ZhcGhyM3hZZHkxT051RDA2d21kT1hCTDRBV1Z2MHFvcUcvQkFCM0E" 
                     alt="MagSafe" 
@@ -658,7 +662,7 @@
             <p class="text-sm text-apple-gray mt-auto">$59.00</p>
             </div>
 
-            <div class="swiper-slide p-5 bg-apple-light-bg rounded-xl  flex flex-col items-center group/card">
+            <div class="swiper-slide p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl  flex flex-col items-center group/card">
             <div class="flex items-center justify-center mb-12">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGD74?wid=532&hei=582&fmt=png-alpha&.v=Nm9pdHNQWlpqeUxJK05lY2hoUkdzZ0hqc0NvK2RZTVd5TWVhUDFuQlo0MzNKK09jOHUreEYvZnpSQUVFYUZBZnpxVmhFdC9yK2RzT3FKL1lsOVpPbVE" 
                     alt="AirTag" 
@@ -670,7 +674,7 @@
             <p class="text-sm text-apple-gray mt-auto">$39.00</p>
             </div>
 
-            <div class="swiper-slide  p-5 bg-apple-light-bg rounded-xl  flex flex-col items-center group/card">
+            <div class="swiper-slide  p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl  flex flex-col items-center group/card">
             <div class="flex items-center justify-center mb-6">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MHWC4?wid=532&hei=582&fmt=png-alpha&.v=VFRpOStvSmwxZlpXZnVuRnY5Q1pMZ0hqc0NvK2RZTVd5TWVhUDFuQlo0MTlvNm5sMVp5bE5oMWFJT0dVaytGcnJmWFZCLzNEcHQwRFNWUTNWaFBJZGc" 
                     alt="iPhone 17e" 
@@ -683,7 +687,7 @@
             <p class="text-sm text-apple-gray mt-auto">$49.00</p>
             </div>
 
-           <div class="swiper-slide  p-5 bg-apple-light-bg rounded-xl flex flex-col items-center group/card">
+           <div class="swiper-slide  p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
             <div class="flex items-center justify-center mb-12">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MWVV3?wid=532&hei=582&fmt=png-alpha&.v=V2M0KytQQ2JqaGhIV1hQNW95R0tFUUhqc0NvK2RZTVd5TWVhUDFuQlo0MEU1TlFBeVduZEoydzN2b3BiWVlHN2lwT21qT1NDNGgrVFE2SFNpUm1NUlE" 
                     alt="Power Adapter" 
@@ -695,7 +699,7 @@
             <p class="text-sm text-apple-gray mt-auto">$19.00</p>
             </div>
 
-            <div class="swiper-slide p-5 bg-apple-light-bg rounded-xl  flex flex-col items-center group/card">
+            <div class="swiper-slide p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl  flex flex-col items-center group/card">
             <div class="flex items-center justify-center mb-12">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGKN4?wid=532&hei=582&fmt=png-alpha&.v=T0lOcnNHdkZoVHZXUE1wQk9tZ1A4d0hqc0NvK2RZTVd5TWVhUDFuQlo0M0NzdzNDT1N4VEJGYnliSWtxOW1wYWxkajZ1cGQ5WVZidWhPak1Ga21BOGc" 
                     alt="AirTag" 
@@ -707,7 +711,7 @@
             <p class="text-sm text-apple-gray mt-auto">$39.00</p>
             </div>
            
-            <div class="swiper-slide  p-5 bg-apple-light-bg rounded-xl flex flex-col items-center group/card">
+            <div class="swiper-slide  p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
             <div class="flex items-center justify-center ">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGF94?wid=532&hei=582&fmt=png-alpha&.v=NHVHbTRuTXNCZ2YyMFpQQzliQWUrZ0hqc0NvK2RZTVd5TWVhUDFuQlo0MTl4TEdnL1N0R09CKzNaY2RTOWdUMjZXNFI5THd4Z01LM1VpUzd0TFNGaVE" 
                     alt=" iPhone 17 Pro Max" 
@@ -733,18 +737,23 @@
         <div class="swiper-button-prev absolute custom-arrow hidden md:flex"></div>
 
         <div class="text-center my-8">
-          <a href="#" class="text-apple-blue hover:underline text-lg">Shop all iPhone accessories ></a>
+            <a href="#" class="flex items-center justify-center text-apple-blue hover:underline text-lg">Shop all iPhone accessories
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+               <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
         </div>
         </section>
 
       <!--Apple Watch Bands -->
-        <section class="swiper mySwiper max-w-[1024px] pb-14 mx-auto relative dark">
+        <section class="swiper mySwiper max-w-[1024px] mt-10 pb-14 mx-auto relative dark">
         <div class="text-center mb-12">
             <h2 class="text-4xl md:text-5xl text-apple-gray font-semibold tracking-tight">Apple Watch Bands</h2>
         </div>
 
         <div class="swiper-wrapper flex items-center md:items-stretch flex-row  gap-6">
-          <div class="swiper-slide p-5 bg-apple-light-bg rounded-xl flex flex-col items-center group/card">
+          
+          <div class="swiper-slide p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
             <div class=" flex items-center justify-center">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MHYK4ref?wid=532&hei=582&fmt=png-alpha&.v=T0k2ZVhPeVJLeUtDa3JwNlZHN215Rkxrd3NRTzUwSGh2QVAzV3JWV0JLY0lJMFpLdCtUemUzUEVLOWMwUTQ0Vm9PSVQzejFVM0F6OEpkQkpSNGEzTUE" 
                     alt="Sport Band" 
@@ -768,7 +777,7 @@
             <p class="text-sm text-apple-gray mt-auto">$49.00</p>
            </div>
 
-            <div class="swiper-slide  p-5 bg-apple-light-bg rounded-xl flex flex-col items-center group/card">
+            <div class="swiper-slide  p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
             <div class="flex items-center justify-center">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MHYW4?wid=532&hei=582&fmt=png-alpha&.v=VkVCc0MyaVhYdU1MNC83U0xvM0NaZ0hqc0NvK2RZTVd5TWVhUDFuQlo0MlhBTjlUZDYzNDR5RnVuNlp3TVhrbW8rSnRhVEZ6d0t0RlFJdzY2WXBRV3c" 
                     alt="Sport loop" 
@@ -790,7 +799,7 @@
             <p class="text-sm text-apple-gray mt-auto">$49.00</p>
             </div>
 
-            <div class="swiper-slide  p-5 bg-apple-light-bg rounded-xl flex flex-col items-center group/card">
+            <div class="swiper-slide  p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
             <div class="flex items-center justify-center ">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGJ44ref?wid=532&hei=582&fmt=png-alpha&.v=S3RjMi9OTkFoVDRzeTN3YzIvTXFKVkxrd3NRTzUwSGh2QVAzV3JWV0JLZGQwTDBLMkk4Njh0VnFzYlpXWjZhZmFoemhWb09hT1BmQWVFdjBsbWR2cEE" 
                     alt="Gold Milanese Loop" 
@@ -807,7 +816,7 @@
             <p class="text-sm text-apple-gray mt-auto">$99.00</p>
             </div>
 
-            <div class="swiper-slide  p-5 bg-apple-light-bg rounded-xl flex flex-col items-center group/card">
+            <div class="swiper-slide  p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
             <div class="flex items-center justify-center ">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXMC3?wid=532&hei=582&fmt=png-alpha&.v=S1VIaUw3TVVWZDM1U0dRaG55NkxBUUhqc0NvK2RZTVd5TWVhUDFuQlo0MjNrTGtNYnVKWG5haEQzNFkxWEVjODhYcVliKzRpbjZEM1I5RjY4TGd1RUE" 
                     alt="Gold Linl Bracelet" 
@@ -824,7 +833,7 @@
             <p class="text-sm text-apple-gray mt-auto">$349.00</p>
             </div>
 
-             <div class="swiper-slide p-5 bg-apple-light-bg rounded-xl flex flex-col items-center group/card">
+            <div class="swiper-slide p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
             <div class="flex items-center justify-center ">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MHXR4?wid=532&hei=582&fmt=png-alpha&.v=akhiaklhN24xME04MzkrdkFCY3V0Z0hqc0NvK2RZTVd5TWVhUDFuQlo0Mk9ZaWRTa21nZVllb2xTOGM4SWlyeHVFaTBGUlVtQm9tV3JpcjM3c0d6UXc" 
                     alt="Apple Watch" 
@@ -847,17 +856,21 @@
         <div class="swiper-button-prev absolute custom-arrow hidden md:flex"></div>
 
         <div class="text-center my-8">
-            <a href="#" class="text-apple-blue hover:underline text-lg">Shop all bands ></a>
+            <a href="#" class="flex items-center justify-center text-apple-blue hover:underline text-lg">Shop all bands
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+               <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
         </div>
         </section>
 
         <!--Sport with style. -->
-        <section class="max-w-[1024px] mx-auto px-5 md:px-12 pb-16 relative  dark">
+        <section class="swiper mySwiper max-w-[1024px] mt-10 pb-14 mx-auto relative dark">
         <div class="text-center mb-12">
             <h2 class="text-4xl md:text-5xl text-apple-gray font-semibold tracking-tight">Sport with style.</h2>
         </div>
-        <div class="flex items-center md:items-stretch flex-col md:flex-row gap-5 pb-2">
-          <div class="w-[450px] bg-apple-light-bg rounded-xl p-5 flex flex-col items-center group/card">
+        <div class="swiper-wrapper flex items-center md:items-stretch flex-row gap-6">
+           <div class="swiper-slide p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
             <div class=" flex items-center justify-center mb-8">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MJ2D4?wid=532&hei=582&fmt=png-alpha&.v=VWRSMDBhY000M2hjS3JJcXQ4S1ZjQUhqc0NvK2RZTVd5TWVhUDFuQlo0M1VpaVAydWVEWFN6TWVtVkJoY0VLakRtRjFKanU0YzNocVhNT1E5WjFPaEE" 
                     alt="Powerbeats pro 2 - Nike Special Edition" 
@@ -871,7 +884,7 @@
             <p class="text-sm text-apple-gray mt-auto">$249.99</p>
            </div>
 
-            <div class="w-[450px] p-5 bg-apple-light-bg rounded-xl flex flex-col items-center group/card">
+            <div class="swiper-slide p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
             <div class="flex items-center justify-center">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGD24_AV1?wid=532&hei=582&fmt=png-alpha&.v=MVhTUWxXVS95STkrdEhvbnpFNW1JU3RmTlp5VEhLWFJQOFJ5QjdiWWtScDdDR0Z2dzN0cEVtVUhNSHY0M3FCVDdyNjM1VnR4di90bDhBNTYweGdiMFE" 
                     alt="46mm VoltSplash Nike Sport Loop" 
@@ -892,7 +905,7 @@
             <p class="text-sm text-apple-gray mt-auto">$49.00</p>
             </div>
 
-            <div class="w-[450px] p-5 bg-apple-light-bg rounded-xl  flex flex-col items-center group/card">
+            <div class="swiper-slide p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
             <div class="flex items-center justify-center ">
                 <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGJM4?wid=532&hei=582&fmt=png-alpha&.v=dFVqUWZ0a2tHOEZCaGpkN2NheUN5UUhqc0NvK2RZTVd5TWVhUDFuQlo0MmJWWStyQy9Bc0pkZ0lVRHMwajExY2tERE10eXgzUjNzTld2OEZnZSs4REE" 
                     alt="Beats iPhone 17 pro" 
@@ -909,24 +922,50 @@
             </h3>
             <p class="text-sm text-apple-gray mt-auto">$79.00</p>
             </div>
+
+            <div class="swiper-slide p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
+            <div class="flex items-center justify-center ">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGC64ref_AV1?wid=532&hei=582&fmt=png-alpha&.v=NW5ualVsM3F3OFl6N2dNN3JYRWQrY25GeFlBNUZ4MVNzNjJzZFhYMTFSakhxZjQyanFrTDN5a241WlpqRHdlVHA4Ky90S3VtVFZzbGoyamRObi9PS1E" 
+                    alt="46mm Alpenglow Pink Nike Sport Band - S/M" 
+                    class="object-contain h-full group-hover/card:scale-105 transition-transform duration-500">
+            </div>
+             <div class="flex gap-1 mb-5">
+                <span class="w-3 h-3 rounded-full bg-[#413F3F] border border-black/5"></span>
+                <span class="w-3 h-3 rounded-full bg-[#FCA68E] border border-black/5"></span>    
+                <span class="w-3 h-3 rounded-full bg-[#79859C] border border-black/5"></span>
+                <span class="w-3 h-3 rounded-full bg-[#AFA9A3] border border-black/5"></span>
+                <span class="w-3 h-3 rounded-full bg-[#DEE823] border border-black/5"></span>
+            </div>
+            <h3 class="font-semibold text-center text-apple-gray leading-tight mb-2 px-6 mt-6">
+               46mm Alpenglow Pink Nike Sport Band - S/M
+            </h3>
+            <p class="text-sm text-apple-gray mt-auto">$79.00</p>
+            </div>
+
+            <div class="swiper-slide p-5 bg-apple-card-bg dark:bg-[#1d1d1f] rounded-xl flex flex-col items-center group/card">
+            <div class=" flex items-center justify-center mb-8">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MJ2D4?wid=532&hei=582&fmt=png-alpha&.v=VWRSMDBhY000M2hjS3JJcXQ4S1ZjQUhqc0NvK2RZTVd5TWVhUDFuQlo0M1VpaVAydWVEWFN6TWVtVkJoY0VLakRtRjFKanU0YzNocVhNT1E5WjFPaEE" 
+                    alt="Powerbeats pro 2 - Nike Special Edition" 
+                    class="object-contain h-full group-hover/card:scale-105 transition-transform duration-500">
+            </div>
+
+            <span class="text-[#bf4800] text-sm font-bold">New</span>
+            <h3 class="font-semibold text-center text-apple-gray leading-tight my-2  px-6">
+                Powerbeats pro 2 - Nike Special Edition
+            </h3>
+            <p class="text-sm text-apple-gray mt-auto">$249.99</p>
+           </div>
         </div>
 
-        <!-- <button class="absolute left-6 top-[55%] -translate-y-1/2 bg-[#d2d2d7]/50 hover:bg-[#d2d2d7] p-3 rounded-full z-10 transition-colors hidden md:block">
-            <svg class="w-6 h-6 text-[#1d1d1f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-        <button class="absolute right-6 top-[55%] -translate-y-1/2 bg-[#d2d2d7]/50 hover:bg-[#d2d2d7] p-3 rounded-full z-10 transition-colors hidden md:block">
-            <svg class="w-6 h-6 text-[#1d1d1f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
-        </button> -->
+        <div class="swiper-button-next absolute custom-arrow hidden md:flex"></div>
+        <div class="swiper-button-prev absolute custom-arrow hidden md:flex"></div>
 
-        <div class="flex justify-center gap-3 mt-2">
-            <span class="w-2 h-2 rounded-full bg-[#424245]"></span>
-            <span class="w-2 h-2 rounded-full bg-[#d2d2d7]"></span>
-            <span class="w-2 h-2 rounded-full bg-[#d2d2d7]"></span>
-            <span class="w-2 h-2 rounded-full bg-[#d2d2d7]"></span>
-        </div>
-
-        <div class="text-center mt-8">
-            <a href="#" class="text-apple-blue hover:underline text-lg">Shop all bands ></a>
+        <div class="text-center my-8">
+            <a href="#" class="flex items-center justify-center text-apple-blue hover:underline text-lg">Shop all bands
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+               <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
         </div>
         </section>
     </main>

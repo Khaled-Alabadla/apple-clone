@@ -113,7 +113,6 @@ allSwipers.forEach((slider) => {
     slidesPerView: "auto", 
     spaceBetween: 0,      
     centeredSlides: false, 
-    autoHeight: true,
     breakpoints: {
         320: {
             spaceBetween: 15
@@ -121,12 +120,6 @@ allSwipers.forEach((slider) => {
         1024: {
             spaceBetween: 25
         }
-    },
-
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true, 
     },
 
     navigation: {
