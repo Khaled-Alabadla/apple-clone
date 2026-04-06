@@ -12,6 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: ['class', '.dark-mode'],
             theme: {
                 extend: {
                     colors: {
@@ -82,7 +83,20 @@
                     <li class="hidden md:block" data-menu="accessories"><a href="accessories.html"
                             class="nav-link text-xs opacity-80 hover:opacity-100">Accessories</a></li>
                     <li><a href="support.html" class="nav-link text-xs opacity-80 hover:opacity-100">Support</a></li>
-                    <li class="nav-item">
+                    <li class="nav-item flex items-center gap-3">
+                        <div id="battery-indicator"
+                            class="flex items-center gap-2 h-5 pr-1 text-black dark:text-white cursor-help"
+                            title="Scroll Progress">
+                            <div
+                                class="w-[22px] h-[11px] border border-current rounded-[3px] p-[1px] relative opacity-80">
+                                <div id="battery-level"
+                                    class="h-full w-0 bg-[#34c759] rounded-[1px] transition-all duration-100 ease-linear">
+                                </div>
+                            </div>
+                            <div class="w-[2.5px] h-1 bg-current rounded-r-[1px] opacity-40"></div>
+                            <span id="battery-text"
+                                class="text-[10px] font-semibold tabular-nums opacity-100 min-w-[28px] hidden md:inline ml-1">0%</span>
+                        </div>
                         <button id="theme-toggle" class="theme-switch" aria-label="Toggle Theme">
                             <span class="switch-track">
                                 <span class="switch-thumb">
@@ -316,8 +330,6 @@
 
         </div>
     </div>
-    <!-- Mega Menu Backdrop -->
-    <div id="mega-menu-backdrop" class="fixed inset-0 z-[9997] hidden"></div>
 
     <main>
         <!-- Hero 1: iPhone -->
@@ -457,9 +469,9 @@
 
         <!-- Apple TV+ Carousel -->
         <section class="py-5 pb-16">
-            <div class="swiper mySwiper h-carousel">
+            <div class="mySwiper h-carousel">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide rounded-[18px] overflow-hidden bg-black relative">
+                    <div class="swiper-slide rounded-[18px]">
                         <img class="w-full h-full object-cover brightness-95"
                             src="https://is1-ssl.mzstatic.com/image/thumb/pa_Dd2CLL-BlWQRqIurClw/2500x1336sr.jpg"
                             alt="Apple TV Show">
@@ -470,7 +482,7 @@
                             <span class="text-[#000]"><b>Drama</b> &middot; New season.</span>
                         </div>
                     </div>
-                    <div class="swiper-slide rounded-[18px] overflow-hidden bg-black relative">
+                    <div class="swiper-slide rounded-[18px]">
                         <img class="w-full h-full object-cover brightness-95"
                             src="https://is1-ssl.mzstatic.com/image/thumb/Features/v4/5d/6b/8a/5d6b8a24-1ba8-6a08-8596-47d0cadacd5d/fc3f421a-0ae3-48fa-9cfc-bf3c4f6240e2.png/2500x1336sr.jpg"
                             alt="Apple TV Show">
@@ -481,7 +493,7 @@
                             <span class="text-white"><b>Comedy</b> &middot; Getting it together. Together.</span>
                         </div>
                     </div>
-                    <div class="swiper-slide rounded-[18px] overflow-hidden bg-black relative">
+                    <div class="swiper-slide rounded-[18px]">
                         <img class="w-full h-full object-cover brightness-95"
                             src="https://is1-ssl.mzstatic.com/image/thumb/OmAEHiPsBUBSNjqgm9ItjA/2500x1336sr.jpg"
                             alt="Apple TV Show">
@@ -492,7 +504,7 @@
                             <span class="text-white"><b>Documentary</b> &middot; Unbelievable true story.</span>
                         </div>
                     </div>
-                    <div class="swiper-slide rounded-[18px] overflow-hidden bg-black relative">
+                    <div class="swiper-slide rounded-[18px]">
                         <img class="w-full h-full object-cover brightness-95"
                             src="https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/f2/4e/e3/f24ee3d7-7259-eb81-141c-ecc587d62dff/9d737dbe-b401-4b72-94ef-74c77cf5a95a.png/2500x1336sr.jpg"
                             alt="Apple TV Show">
@@ -504,7 +516,7 @@
                                 truth.</span>
                         </div>
                     </div>
-                    <div class="swiper-slide rounded-[18px] overflow-hidden bg-black relative">
+                    <div class="swiper-slide rounded-[18px]">
                         <img class="w-full h-full object-cover brightness-95"
                             src="https://is1-ssl.mzstatic.com/image/thumb/HntOU0HJBFL_Tp0fasZQtQ/2500x1336sr.jpg"
                             alt="Apple TV Show">
@@ -516,7 +528,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
         </section>
     </main>
@@ -576,10 +587,9 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>
